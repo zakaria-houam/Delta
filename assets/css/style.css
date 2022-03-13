@@ -1,0 +1,460 @@
+@font-face {
+    font-family: aljazeera;
+    src: url(../font/ArbFONTS-Aljazeera.ttf) format(ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: aljazeera;
+    direction: rtl;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --first:#0a3739;
+    --second:#50b8ba;
+    --third:white;
+    --fourth:#F5F5F5;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--third);
+}
+.shadow{
+    box-shadow: 1px 10px 10px 1px var(--second);
+}
+
+.navbar,.logo,.nav ul,.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav{
+    gap: 23rem;
+}
+.navbar{
+    padding: 0 2rem;
+}
+.logo h1{
+    font-size: 1rem;
+    color: var(--first);
+}
+
+.nav ul li{
+    margin-left: 2rem;
+}
+.navbar a{
+    color: var(--first);
+    font-size: 1.2rem;
+}
+.nav-item:hover{
+    border-bottom: 1px solid var(--second);
+   
+}
+.contact-nav a,.explore .right-item,.serv a{
+    border: 1px solid var(--second);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    
+}
+.contact-nav a:hover,.explore .right-item:hover,.serv a:hover{
+    background: var(--second);
+    color: var(--third);
+}
+.menu{
+    display: none;
+}
+.home{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(../media/confident-business-team-with-the-leader.jpg) ;  
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    gap: 2rem;
+}
+.home .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
+.home .left h1{
+    color: white;
+    font-weight: bolder;
+    font-size: 6rem;
+    line-height: 1.2;
+}
+.home .left h3{
+    color: grey;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.home .left-top{
+    display: flex;
+    justify-content: right;
+    margin-left: 37rem;
+    gap: .2rem;
+    align-items: center;
+}
+.home .left-top h4{
+    color: var(--second);
+    font-weight: 100;
+}
+.home .left-top span{
+    width: 5rem;
+    height: .2rem;
+    color: var(--second);
+    background-color: var(--second);
+    font-size: 0px;
+}
+.explore{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-left: 25rem;
+}
+
+.explore a{
+    color: var(--third);
+    font-size: 1.5rem;
+}
+.explore .right-item{
+    padding: .5rem 3rem;
+}
+.explore .left-item{
+    color: var(--second);
+
+}
+.explore .left-item:hover{
+    color: var(--third);
+}
+
+.center-aboutus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-top: 4rem;
+}
+.center-aboutus p{
+    font-size: 1.2rem;
+    font-weight: 100;
+    
+}
+.center-aboutus h2{
+    color: var(--first);
+    font-size: 4rem;
+}
+.center-aboutus .right img{
+    width: 700PX;
+    border-radius: 10PX;
+    border: 1px solid var(--second);
+}
+
+.skills-bar .bar{
+    margin: 20px 0;
+}
+.skills-bar .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    
+}
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: var(--second);
+    margin-top: .8rem;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: right;
+    animation: skills 1s   cubic-bezier(1,0,0.5,1) forwards;
+}
+
+ .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: var(--first);
+    border-radius: 10px;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    animation: skills 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes skills{
+    100%{
+        transform: scaleX(100%);
+    }
+}
+.progress-line.web span {
+    width: 95%;
+}
+.progress-line.design span{
+    width: 80%;
+}
+.progress-line.voice span{
+    width:95%;
+}
+.progress-line.montage span {
+    width: 60%;
+}
+.skills-bar .bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-left-width:0px ;
+    border-top-color: black;
+}
+
+.skills-bar .bar .progress-line span::after{
+    position: absolute;
+    left: 0;
+    top: -28px;
+   color: var(--third);
+   font-size: 12px;
+   font-weight: 500;
+   background: black;
+   padding: 1px 8px;
+   border-radius: 3px;
+}
+.progress-line.web span::after{
+    content: "95%";
+}
+.progress-line.design span::after{
+    content: "80%";
+}
+.progress-line.voice span::after{
+    content: "95%";
+}
+.progress-line.montage span::after{
+    content: "60%";
+}
+.details{
+    display: flex;
+    
+    background-color: var(--fourth);
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 3rem;
+}
+.detail img{
+    width: 68px;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.detail h1{
+    color: var(--second);
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: -1rem;
+}
+.detail h3{
+    color: var(--first);
+    font-size: 1rem;
+}
+.section-title,.section-subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-title{
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--first);
+}
+.section-subtitle{
+    font-size: 2rem;
+    color: var(--second);
+    font-weight: 500;
+}
+.servs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.serv{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10px;
+    border: 2px solid var(--second);
+    box-shadow: 1px 1px 20px 1px var(--first);
+    display: flex;
+    flex-direction: column;
+    padding:  1rem;
+    gap: .5rem;
+}
+.serv img{
+    width: 100px;
+}
+.serv h1{
+    font-size: 2rem;
+    color: var(--first);
+}
+.serv p{
+    font-size: 1rem;
+    font-weight: 100;
+}
+.serv a{
+    color: var(--first);
+}
+footer{
+    height: 8rem;
+    background: var(--third);
+    border-top: 1px solid var(--second);
+    margin-top: 3rem;
+}
+footer .top, footer .right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+footer .top  img{
+    width: 70px;
+}
+footer .right ul{
+    display: flex;
+    gap: 2rem;
+}
+footer .right a{
+    color: var(--first);
+    font-size: 1.5rem;
+}
+footer .left img{
+    width: 50px;
+    margin: 2rem;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1100px){
+    .nav{
+        flex-direction: column;
+        gap: rem;
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        background: var(--third);
+        height: 93vh;
+        padding: 2rem 2rem;
+        border-radius: 0px 7px 7px 0px;
+        transition: 1s ease-in-out;
+    }
+    .show-menu{
+        left: 0%;
+    }
+    .nav ul{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .nav ul li{
+        border-bottom: 1px solid var(--first);
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+    .menu{
+        display: block;
+    }
+    .menu i{
+        font-size: 2.5rem;
+        color: var(--first);
+    }
+    .home{
+        padding-top: 2rem;
+    }
+    .home h1,.home h3{
+        padding-right: 1rem;
+        
+    }
+    .home .left-top{
+        margin-left: 9rem;
+    }
+    .home .left{
+        flex-basis: 80%;
+        margin-top: 5rem;
+    }
+    .explore{
+        margin-left: 2rem;
+    }
+    .home .left h1{
+        font-size: 3.5rem;
+    }
+    .home .left h3{
+        font-size: 1.5rem;
+    }
+    .explore a{
+        font-size: 1rem;
+    }
+    .center-aboutus{
+        flex-direction: column;
+    }
+    .center-aboutus .right img{
+        width: 300px;
+    }
+    .center-aboutus .details{
+        flex-direction: column;
+        margin-top: 2rem;
+        padding: .5rem 0;
+        gap: 1.5rem;
+    }
+    .details{
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .servs{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-title{
+        font-size: 2rem;
+    }
+    .section-subtitle{
+        font-size: 1.5rem;
+    }
+    .serv{
+        box-shadow: 1px 1px 20px 1px solid  var(--first);
+    }
+    footer .top,footer .top .right,footer .right ul,footer .left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
